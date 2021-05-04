@@ -42,6 +42,9 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OLSoftware.Services.WebAPIRest", "OLSoftware.Services.WebAPIRest\OLSoftware.Services.WebAPIRest.csproj", "{D135B35F-5353-4970-AB6E-D48983C37025}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{648E11E6-D270-45A8-80C4-6B5536DCE239}"
+	ProjectSection(SolutionItems) = preProject
+		Scripts\UspGetProjectInfoAsync.sql = Scripts\UspGetProjectInfoAsync.sql
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OLSoftware.InfraStructure.DAL", "OLSoftware.InfraStructure.DAL\OLSoftware.InfraStructure.DAL.csproj", "{15379A52-735D-45BC-B557-C88812EF7B0F}"
 EndProject
