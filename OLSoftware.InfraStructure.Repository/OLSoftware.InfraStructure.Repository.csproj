@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.0.35" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\OLSoftware.InfraStructure.DAL\OLSoftware.InfraStructure.DAL.csproj" />
+    <ProjectReference Include="..\OLSoftware.InfraStructure.Interface\OLSoftware.InfraStructure.Interface.csproj" />
+    <ProjectReference Include="..\OLSoftware.Transversal.Common\OLSoftware.Transversal.Common.csproj" />
+  </ItemGroup>
+
+</Project>

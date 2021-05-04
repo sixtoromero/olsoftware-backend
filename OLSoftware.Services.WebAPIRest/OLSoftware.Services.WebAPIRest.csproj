@@ -1,0 +1,50 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <WarningLevel>5</WarningLevel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\CamareroController.cs" />
+    <Compile Remove="Controllers\CocineroController.cs" />
+    <Compile Remove="Controllers\FacturaController.cs" />
+    <Compile Remove="Controllers\MesaController.cs" />
+    <Compile Remove="Controllers\ViewFacturaController.cs" />
+    <Compile Remove="Controllers\WeatherForecastController.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.0.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.0.1" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="10.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.8" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.5">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\OLSoftware.Application.Interface\OLSoftware.Application.Interface.csproj" />
+    <ProjectReference Include="..\OLSoftware.Application.Main\OLSoftware.Application.Main.csproj" />
+    <ProjectReference Include="..\OLSoftware.Domain.Core\OLSoftware.Domain.Core.csproj" />
+    <ProjectReference Include="..\OLSoftware.Domain.Entity\OLSoftware.Domain.Entity.csproj" />
+    <ProjectReference Include="..\OLSoftware.Domain.Interface\OLSoftware.Domain.Interface.csproj" />
+    <ProjectReference Include="..\OLSoftware.InfraStructure.Data\OLSoftware.InfraStructure.Data.csproj" />
+    <ProjectReference Include="..\OLSoftware.InfraStructure.Interface\OLSoftware.InfraStructure.Interface.csproj" />
+    <ProjectReference Include="..\OLSoftware.InfraStructure.Repository\OLSoftware.InfraStructure.Repository.csproj" />
+    <ProjectReference Include="..\OLSoftware.Transversal.Logging\OLSoftware.Transversal.Logging.csproj" />
+    <ProjectReference Include="..\OLSoftware.Transversal.Mapper\OLSoftware.Transversal.Mapper.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="src\img\" />
+  </ItemGroup>
+
+
+</Project>
