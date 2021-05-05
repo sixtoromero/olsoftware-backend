@@ -91,6 +91,10 @@ namespace OLSoftware.Services.WebAPIRest
             services.AddScoped<IProjectApplication, ProjectApplication>();
             services.AddScoped<IProjectDomain, ProjectDomain>();
             services.AddScoped<IProjectRepository, ProjectRepository>();
+            
+            services.AddScoped<IInfoApplication, InfoApplication>();
+            services.AddScoped<IInfoDomain, InfoDomain>();
+            services.AddScoped<IInfoRepository, InfoRepository>();
 
             #endregion
             services.AddScoped(typeof(IAppLogger<>), typeof(LoggerAdapter<>));

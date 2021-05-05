@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 
 namespace OLSoftware.Application.Interface
 {
-    public interface IProjectApplication : IApplication<ProjectDTO>
-    {
-
+    public interface IInfoApplication
+    {        
+        Task<Response<IEnumerable<InfoProjectDTO>>> GetProjectInfoAsync();
     }
 }

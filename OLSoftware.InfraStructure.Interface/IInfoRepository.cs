@@ -4,8 +4,8 @@ using System.Threading.Tasks;
 
 namespace OLSoftware.InfraStructure.Interface
 {
-    public interface IProjectRepository : IRepository<Project>
+    public interface IInfoRepository
     {
-        
+        Task<IEnumerable<InfoProject>> GetProjectInfoAsync();
     }
 }

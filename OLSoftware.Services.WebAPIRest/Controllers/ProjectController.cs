@@ -145,34 +145,7 @@ namespace OLSoftware.Services.WebAPIRest.Controllers
 
                 return BadRequest(response);
             }
-        }
-
-        [HttpGet("GetProjectInfoAsync")]
-        public async Task<IActionResult> GetProjectInfoAsync()
-        {
-            Response<ProjectDTO> response = new Response<ProjectDTO>();
-
-            try
-            {
-                response = await _ProjectApplication.GetProjectInfoAsync();
-                if (response.IsSuccess)
-                {
-                    return Ok(response);
-                }
-                else
-                {
-                    return BadRequest(response);
-                }
-            }
-            catch (Exception ex)
-            {
-                response.Data = null;
-                response.IsSuccess = false;
-                response.Message = ex.Message;
-
-                return BadRequest(response);
-            }
-        }
+        }        
 
         [HttpGet("GetAsync/{Id}")]
         public async Task<IActionResult> GetAsync(int Id)

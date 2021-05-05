@@ -14,7 +14,8 @@ namespace OLSoftware.Transversal.Mapper
             CreateMap<Customer, CustomerDTO>().ReverseMap();
             CreateMap<Project, ProjectDTO>().ReverseMap();
             CreateMap<ProgrammingLanguages, ProgrammingLanguagesDTO>().ReverseMap();
-            CreateMap<LanguagesByProject, ProgrammingLanguagesbyProjectDTO>().ReverseMap();            
+            CreateMap<LanguagesByProject, ProgrammingLanguagesbyProjectDTO>().ReverseMap();
+            CreateMap<InfoProject, InfoProjectDTO>().ReverseMap();
         }
     }
 }

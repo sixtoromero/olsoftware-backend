@@ -38,16 +38,11 @@ namespace OLSoftware.Domain.Core
         public async Task<IEnumerable<Project>> GetAllAsync()
         {
             return await _Repository.GetAllAsync();
-        }        
+        }
 
         public async Task<Project> GetAsync(int? Id)
         {
             return await _Repository.GetAsync(Id);
-        }
-
-        public async Task<Project> GetProjectInfoAsync()
-        {
-            return await _Repository.GetProjectInfoAsync();
-        }
+        }        
     }
 }

@@ -140,36 +140,7 @@ namespace OLSoftware.Application.Main
             }
 
             return response;
-        }
-
-        public async Task<Response<ProjectDTO>> GetProjectInfoAsync()
-        {
-            var response = new Response<ProjectDTO>();
-            try
-            {
-                var resp = await _ProjectsDomain.GetProjectInfoAsync();
-
-                response.Data = _mapper.Map<ProjectDTO>(resp);
-                if (response.Data != null)
-                {
-                    response.IsSuccess = true;
-                    response.Message = string.Empty;
-                }
-                else
-                {
-                    response.IsSuccess = false;
-                    response.Message = "Ha ocurrido un error consultando los registros.";
-                    _logger.LogWarning("Ha ocurrido un error consultando los registros por Id.");
-                }
-            }
-            catch (Exception ex)
-            {
-                response.Message = ex.Message;
-                _logger.LogError(ex.Message);
-            }
-
-            return response;
-        }       
+        }        
 
         public async Task<Response<ProjectDTO>> GetAsync(int? Id)
         {
