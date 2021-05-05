@@ -10,6 +10,7 @@ namespace OLSoftware.Application.DTO
         public string ProjectName { get; set; }
         public int CustomerId { get; set; }
         public string Customer { get; set; }
+        public string Phone { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public decimal Price { get; set; }
