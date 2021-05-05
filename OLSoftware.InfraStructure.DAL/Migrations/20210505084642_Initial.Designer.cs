@@ -10,7 +10,7 @@ using OLSoftware.InfraStructure.DAL;
 namespace OLSoftware.InfraStructure.DAL.Migrations
 {
     [DbContext(typeof(OLSoftwareDataContext))]
-    [Migration("20210504195620_Initial")]
+    [Migration("20210505084642_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -47,7 +47,8 @@ namespace OLSoftware.InfraStructure.DAL.Migrations
                         .HasColumnType("nvarchar(120)");
 
                     b.Property<string>("Phone")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(25)
+                        .HasColumnType("nvarchar(25)");
 
                     b.Property<string>("Surnames")
                         .IsRequired()

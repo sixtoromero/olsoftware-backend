@@ -45,7 +45,8 @@ namespace OLSoftware.InfraStructure.DAL.Migrations
                         .HasColumnType("nvarchar(120)");
 
                     b.Property<string>("Phone")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(25)
+                        .HasColumnType("nvarchar(25)");
 
                     b.Property<string>("Surnames")
                         .IsRequired()
